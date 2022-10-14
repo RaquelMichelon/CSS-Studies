@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Row Container */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      color: white;
+    }
+    
+    /* In order to create four equal columns */
+    .column {
+      flex: 25%;
+      padding: 20px;
+    }
+    
+     /* two columns */
+    @media screen and (max-width: 992px) {
+      .column {
+        flex: 50%;
+      }
+    }
+    
+     /* One column */
+     @media screen and (max-width: 600px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1>Responsive layout of four columns using flex</h1>
+  <ul>
+    <li>less or equal 992px - resize to two columns.</li>
+    <li>less or equal 600px - resize to one column.</li>
+  </ul>
+  
+  <div class="row">
+     <div class="column" style="background-color: black;">
+       <h2>First Column</h2>
+       <p>Here is the text of the first column.</p>
+     </div>
+    
+    <div class="column" style="background-color: gray;">
+      <h2>Second Column</h2>
+       <p>Here is the text of the second column.</p>
+     </div>
+    
+    <div class="column" style="background-color: green;">
+      <h2>Third Column</h2>
+       <p>Here is the text of the third column.</p>
+     </div>
+    
+    <div class="column" style="background-color: blue;">
+      <h2>Fourth Column</h2>
+       <p>Here is the text of the fourth column.</p>
+     </div>
+   
+  </div>
+</body>
+</html>
